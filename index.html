@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="description" content="Cửa hàng cung cấp dụng cụ câu cá chất lượng cao với giá cả cạnh tranh.">
+    <title>Bán Đồ Thú Cưng | Cửa Hàng Thú Cưng</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="./images/logo.jpg" alt="Logo" width="100" height="100" class="me-2" loading="lazy" />
+                    Shop FB888
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Trang Chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hotel-for-dogandcat.html">Dịch Vụ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Sản phẩm</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                        <li class="nav-item dropdown" id="userProfile" style="display: none;">
+                            <a class="nav-link dropdown-toggle" href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Người Dùng: <span id="userPhone">0859551199</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="userProfileDropdown">
+                                <li><a class="dropdown-item" href="medical-profile.html">Hồ sơ đăng ký khám chữa bệnh</a></li>
+                                <li><a class="dropdown-item" href="hotel-registration.html">Hồ sơ đăng ký dịch vụ Khách sạn</a></li>
+                                <li><a class="dropdown-item" href="cart.html">Giỏ hàng</a></li>
+                                <li><a class="dropdown-item" href="#" id="logoutButton">Đăng xuất</a></li> 
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="loginLink" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="loginModal" class="modal fade" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Đăng Nhập</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Số điện thoại</label>
+                                <input type="text" class="form-control" id="username" placeholder="Nhập số điện thoại của bạn">
+                            </div>
+                            <div class="mb-3">
+                                <label for="otp" class="form-label">Mã OTP</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="otp" placeholder="Nhập mã OTP">
+                                    <button type="button" class="btn btn-secondary" id="sendOtpButton">Gửi mã</button>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Carousel -->
+        <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 65%; margin-left: 355px;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/banner1.jpg" width="1440px" height="360px" class="d-block w-100" alt="Pet Care Banner 1" loading="lazy" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Chào Mừng Đến Với Cửa Hàng FB888</h1>
+                        <p>Sản phẩm chất lượng, giá cả cạnh tranh.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner2.jpg" width="1440px" height="360px" class="d-block w-100" alt="Banner 2" loading="lazy" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Dịch vụ thú cưng</h1>
+                        <p>Chọn lựa các dịch vụ đồ dùng uy tín.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner3.jpg" width="1440px" height="360px" class="d-block w-100" alt="Banner 3" loading="lazy" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Giá Cả Hợp Lý</h1>
+                        <p>Dịch vụ luôn có giá cả hợp lí.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Trước</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sau</span>
+            </button>
+        </div>
+
+        <!-- About Section -->
+        <section class="py-5 bg-light">
+            <div class="container mx-auto text-center my-10">
+                <h2 class="text-xl md:text-4xl font-bold">Đặt lịch khám trực tuyến</h2>
+                <p class="opacity-80"> Tìm Bác sĩ chính xác - Đặt lịch khám dễ dàng </p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="d-flex overflow-auto gap-3">
+                    
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="./images/basi.png" class="card-img-top" alt="" loading="lazy" />
+                            <div class="card-body">
+                                <h5 class="card-title">BS.Vũ Văn Lợi</h5>
+                                <p class="card-text">Chuyên khoa khám chữa bệnh cho thú y.</p>
+                                <p class="card-text">Thời gian làm việc : 22/10/2024</p>
+                                <p class="card-text">13:00PM - 16:00PM </p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="contract-form.html" class="btn btn-outline-dark fw-bold">Đặt Lịch Khám</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="./images/basi.png" class="card-img-top" alt="" loading="lazy" />
+                            <div class="card-body">
+                                <h5 class="card-title">BS.Trần Thanh Triều </h5>
+                                <p class="card-text">Chuyên khoa khám chữa bệnh cho thú y.</p>
+                                <p class="card-text">Thời gian làm việc : 23/10/2024</p>
+                                <p class="card-text">13:00PM - 16:00PM </p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="contract-form.html" class="btn btn-outline-dark fw-bold">Đặt Lịch Khám</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="./images/basi.png" class="card-img-top" alt="" loading="lazy" />
+                            <div class="card-body">
+                                <h5 class="card-title">BS.Ngô Chử Tịch </h5>
+                                <p class="card-text">Chuyên khoa khám chữa bệnh cho thú y.</p>
+                                <p class="card-text">Thời gian làm việc : 24/10/2024</p>
+                                <p class="card-text">13:00PM - 16:00PM </p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="contract-form.html" class="btn btn-outline-dark fw-bold">Đặt Lịch Khám</a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="./images/basi.png" class="card-img-top" alt="" loading="lazy" />
+                            <div class="card-body">
+                                <h5 class="card-title">BS.Lê Thiện Thế Bằng</h5>
+                                <p class="card-text">Chuyên khoa khám chữa bệnh cho thú y.</p>
+                                <p class="card-text">Thời gian làm việc : 26/10/2024</p>
+                                <p class="card-text">13:00PM - 16:00PM </p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="contract-form.html" class="btn btn-outline-dark fw-bold">Đặt Lịch Khám</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="./images/basi.png" class="card-img-top" alt="" loading="lazy" />
+                            <div class="card-body">
+                                <h5 class="card-title">BS.Trần Minh Huy</h5>
+                                <p class="card-text">Chuyên khoa khám chữa bệnh cho thú y.</p>
+                                <p class="card-text">Thời gian làm việc : 27/10/2024</p>
+                                <p class="card-text">13:00PM - 16:00PM </p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <a href="contract-form.html" class="btn btn-outline-dark fw-bold">Đặt Lịch Khám</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Products -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="mb-4">Sản Phẩm Nổi Bật</h2>
+                <div class="row">
+                    
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="./images/sp1.jpg" class="card-img-top" alt="" loading="lazy" />
+                            <div class="card-body">
+                                <h5 class="card-title">Áo con vịt thời trang cho chó mèo</h5>
+                                <p class="card-text">Mô tả ngắn về sản phẩm.</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <strong>500,000 VNĐ</strong>
+                                <a href="product-detail.html?id=1" class="btn btn-primary btn-sm">Mua Ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="./images/sp2.jpg" class="card-img-top" alt="" loading="lazy" />
+                            <div class="card-body">
+                                <h5 class="card-title">Váy dạ hội cao cấp</h5>
+                                <p class="card-text">Mô tả ngắn về sản phẩm.</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <strong>300,000 VNĐ</strong>
+                                <a href="product-detail.html?id=2" class="btn btn-primary btn-sm">Mua Ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <img src="./images/sp3.png" class="card-img-top" alt="" loading="lazy" />
+                            <div class="card-body">
+                                <h5 class="card-title">Áo 2 dây mỏng cho chó mèo</h5>
+                                <p class="card-text">Mô tả ngắn về sản phẩm.</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center">
+                                <strong>200,000 VNĐ</strong>
+                                <a href="product-detail.html?id=3" class="btn btn-primary btn-sm">Mua Ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-4 mb-3">
+                    <h5>Liên Hệ</h5>
+                    <p>Địa chỉ: Đại học VanLang, Thành Phố Hồ Chí Minh</p>
+                    <p>Email: <a href="contact@vanlanguni.com" class="text-white">fb888@vanlanguni.com</a></p>
+                    <p>Phone: <a href="tel:+84123456789" class="text-white">+84 987654321</a></p>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <h5>Liên Kết</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Trang Chủ</a></li>
+                        <li><a href="about.html" class="text-white">Giới Thiệu</a></li>
+                        <li><a href="hotel-for-dogandcat.html" class="text-white">Dịch Vụ</a></li>
+                        <li><a href="products.html" class="text-white">Sản phẩm</a></li>
+                        <li><a href="contact.html" class="text-white">Liên Hệ</a></li>
+                    </ul>
+                </div>
+               
+                <div class="col-md-4 mb-3">
+                    <h5>Theo Dõi Chúng Tôi</h5>
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                © 2024 Cửa Hàng Thú Cưng FB888. Bảo lưu mọi quyền.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

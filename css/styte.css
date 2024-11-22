@@ -1,0 +1,75 @@
+/* styles.css */
+
+/* Đảm bảo hình ảnh sản phẩm có kích thước hợp lý */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Định dạng hình ảnh đội ngũ nhân viên */
+.card-img-top.team-member {
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Tùy chỉnh các nút */
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-success {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-success:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Tùy chỉnh phần tiêu đề */
+h2, h4, h5 {
+    color: #343a40;
+}
+
+/* Tùy chỉnh footer */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Tùy chỉnh form */
+form label {
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px;
+    }
+
+    .card-img-top.team-member {
+        height: 200px;
+    }
+}
+.carousel slide{
+    width: 70%;
+    height: 30%;
+}

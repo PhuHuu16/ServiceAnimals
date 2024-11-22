@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="description" content="Thanh toán đơn hàng tại Cửa Hàng Câu Cá.">
+    <title>Thanh Toán | Cửa Hàng Thú Cưng</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="./images/logo.jpg" alt="Logo" width="100" height="100" class="me-2" loading="lazy" />
+                    Shop FB888
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Trang Chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hotel-for-dogandcat.html">Dịch Vụ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Sản phẩm</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                        <li class="nav-item dropdown" id="userProfile" style="display: none;">
+                            <a class="nav-link dropdown-toggle" href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Người Dùng: <span id="userPhone">0859551199</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="userProfileDropdown">
+                                <li><a class="dropdown-item" href="medical-profile.html">Hồ sơ đăng ký khám chữa bệnh</a></li>
+                                <li><a class="dropdown-item" href="hotel-registration.html">Hồ sơ đăng ký dịch vụ Khách sạn</a></li>
+                                <li><a class="dropdown-item" href="cart.html">Giỏ hàng</a></li>
+                                <li><a class="dropdown-item" href="#" id="logoutButton">Đăng xuất</a></li> 
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="loginLink" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5">
+
+        <div id="loginModal" class="modal fade" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Đăng Nhập</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Số điện thoại</label>
+                                <input type="text" class="form-control" id="username" placeholder="Nhập số điện thoại của bạn">
+                            </div>
+                            <div class="mb-3">
+                                <label for="otp" class="form-label">Mã OTP</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="otp" placeholder="Nhập mã OTP">
+                                    <button type="button" class="btn btn-secondary" id="sendOtpButton">Gửi mã</button>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2 class="mb-4">Thanh Toán</h2>
+            <form id="checkout-form">
+                <div class="mb-3">
+                    <label for="customer-name" class="form-label">Họ và Tên</label>
+                    <input type="text" class="form-control" id="customer-name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="customer-email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="customer-email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="customer-address" class="form-label">Địa Chỉ</label>
+                    <input type="text" class="form-control" id="customer-address" required>
+                </div>
+                <div class="mb-3">
+                    <label for="customer-phone" class="form-label">Số Điện Thoại</label>
+                    <input type="tel" class="form-control" id="customer-phone" required>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="checkout()">Xác Nhận </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Liên Hệ -->
+                <div class="col-md-4 mb-3">
+                    <h5>Liên Hệ</h5>
+                    <p>Địa chỉ: Đại học Van Lang, Thành Phố Hồ Chí Minh</p>
+                    <p>Email: <a href="contact@vanlanguni.com" class="text-white">fb888@vanlanguni.com</a></p>
+                    <p>Phone: <a href="tel:+84123456789" class="text-white">+84 1987654321</a></p>
+                </div>
+                <!-- Liên Kết -->
+                <div class="col-md-4 mb-3">
+                    <h5>Liên Kết</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Trang Chủ</a></li>
+                        <li><a href="about.html" class="text-white">Giới Thiệu</a></li>
+                        <li><a href="hotel-for-dogandcat.html" class="text-white">Dịch Vụ</a></li>
+                        <li><a href="products.html" class="text-white">Sản phẩm</a></li>
+                        <li><a href="contact.html" class="text-white">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <!-- Mạng Xã Hội -->
+                <div class="col-md-4 mb-3">
+                    <h5>Theo Dõi Chúng Tôi</h5>
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                © 2024 Cửa Hàng Thú Cưng. Bảo lưu mọi quyền.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js" defer></script>
+</body>
+
+</html>
